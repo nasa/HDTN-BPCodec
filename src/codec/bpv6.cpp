@@ -3,7 +3,10 @@
 #include <string.h>
 #include "codec/bpv6.h"
 
-uint32_t bpv6_primary_block_decode(bpv6_primary_block* primary, const char* buffer, const size_t offset, const size_t bufsz) {
+uint32_t bpv6_primary_block_decode(bpv6_primary_block* primary,
+                                   const char* buffer,
+                                   const size_t offset,
+                                   const size_t bufsz) {
     primary->version = buffer[offset];
     uint8_t  is_fragment = 0;
     uint64_t tmp;
@@ -68,7 +71,10 @@ uint32_t bpv6_primary_block_decode(bpv6_primary_block* primary, const char* buff
     return (index - offset);
 }
 
-uint32_t bpv6_primary_block_encode(const bpv6_primary_block* primary, char* buffer, const size_t offset, const size_t bufsz) {
+uint32_t bpv6_primary_block_encode(const bpv6_primary_block* primary,
+                                   char* buffer,
+                                   const size_t offset,
+                                   const size_t bufsz) {
     buffer[offset] = primary->version;
     uint8_t  is_fragment = 0;
     uint64_t index = offset + 1;
@@ -144,7 +150,10 @@ uint32_t bpv6_primary_block_encode(const bpv6_primary_block* primary, char* buff
     return (index - offset);
 }
 
-uint32_t bpv6_canonical_block_decode(bpv6_canonical_block* block, const char* buffer, const size_t offset, const size_t bufsz) {
+uint32_t bpv6_canonical_block_decode(bpv6_canonical_block* block,
+                                     const char* buffer,
+                                     const size_t offset,
+                                     const size_t bufsz) {
     uint64_t index = offset;
     uint8_t  incr  = 0;
     block->type = buffer[index];
@@ -157,7 +166,10 @@ uint32_t bpv6_canonical_block_decode(bpv6_canonical_block* block, const char* bu
     return index - offset;
 }
 
-uint32_t bpv6_canonical_block_encode(const bpv6_canonical_block* block, char* buffer, const size_t offset, const size_t bufsz) {
+uint32_t bpv6_canonical_block_encode(const bpv6_canonical_block* block,
+                                     char* buffer,
+                                     const size_t offset,
+                                     const size_t bufsz) {
     uint64_t index = offset;
     uint8_t  incr  = 0;
     buffer[index] = block->type;

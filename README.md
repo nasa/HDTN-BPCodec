@@ -1,11 +1,11 @@
 ## BPCodec ##
 
-BPcodec is a stand-alone library designed to support encoding and decoding the bundle protocol format.  Both version 6 and version 7 of the bundle protocol are supported.  The version 6 encode and decode functions have been tested with JPL's ION and GSFC's bplib [1]. The version 7 decode functions have been tested on bundles from uPCN. The version 7 encode functions will be released in the near term. The version 7 implemention is in early stages (pre-alpha) but is being released for research and collaborative purposes in the overall DTN community.
+BPCodec is a stand-alone library designed to support encoding and decoding the bundle protocol format.  Both version 6 and version 7 of the bundle protocol are supported.  The version 6 encode and decode functions have been tested with JPL's ION [1] and GSFC's bplib [2], [3]. The version 7 decode functions have been tested on bundles from uPCN [4]. The version 7 encode functions will be released in the near term. The version 7 implemention is in early stages (pre-alpha) but is being released for research and collaborative purposes in the overall DTN community.
 
-Note that the use of this library will produce results that are compatible with the bundle protocol from a wire perspective.  It does not, however, intend to offer a complete implementation of either version 6 or version 7 of the Bundle Protocol - semantics related to receipt, forwarding, and custody must be independently implemented and observed by a system that wishes to advertise compatibility with such.
+Note that the use of this library will produce results that are compatible with the Bundle Protocol from a wire perspective.  It does not, however, intend to offer a complete implementation of either version 6 or version 7 of the Bundle Protocol - semantics related to receipt, forwarding, and custody must be independently implemented and observed by a system that wishes to advertise compatibility with such.
 
 ## Build Environment ##
-* BPcodec build environment requires CMake version 3.13
+* BPCodec build environment requires CMake version 3.13
 * Testing has been done with gcc version 8.3.0 (Debian 8.3.0-6) 
 * Target: x86_64-linux-gnu 
 * Tested on Debian 10
@@ -61,4 +61,7 @@ There are several areas currently under development with functionality that will
 * CRC validation is planned to be added to the BP v7 functions.
 
 ## References ##
-1. Hylton, A., Raible, D., Clark, G.A., Dudukovich, R., Tomko, B., Laura, & Burk (2019). Rising Above the Cloud- Toward High-Rate Delay-Tolerant Networking in Low- Earth Orbit.
+1. https://sourceforge.net/projects/ion-dtn/
+2. https://software.nasa.gov/software/GSC-18318-1
+3. Hylton, A., Raible, D., Clark, G.A., Dudukovich, R., Tomko, B., Laura, & Burk (2019). Rising Above the Cloud- Toward High-Rate Delay-Tolerant Networking in Low- Earth Orbit.
+4. https://upcn.eu/
