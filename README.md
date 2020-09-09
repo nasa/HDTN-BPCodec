@@ -63,5 +63,5 @@ There are several areas currently under development with functionality that will
 ## References ##
 1. https://sourceforge.net/projects/ion-dtn/
 2. https://software.nasa.gov/software/GSC-18318-1
-3. Hylton, A., Raible, D., Clark, G.A., Dudukovich, R., Tomko, B., Laura, & Burk (2019). Rising Above the Cloud- Toward High-Rate Delay-Tolerant Networking in Low- Earth Orbit.
+3. Hylton, A., Raible, D., Clark, G.A., Dudukovich, R., Tomko, B., Burke, L. (2019). Rising Above the Cloud- Toward High-Rate Delay-Tolerant Networking in Low- Earth Orbit.
 4. https://upcn.eu/
