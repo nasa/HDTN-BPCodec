@@ -5,7 +5,11 @@
 
 #include "codec/bpv7.h"
 #include <string.h>
+#ifdef __APPLE__
+#include "util/apple_endian.h"
+#else
 #include <endian.h>
+#endif
 
 #define CBOR_UINT8_TYPE   (24)
 #define CBOR_UINT16_TYPE  (25)
