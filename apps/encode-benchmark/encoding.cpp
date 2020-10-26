@@ -158,7 +158,7 @@ int main(int argc, char* argv[]) {
             cbor_bytes_total += adv;
             adv = cbor_decode_uint(&dst, src, 0, 16);
             if(dst != to_encode[i]) {
-                printf("[sanity] encode / decode for value `%d` failed (got %d).\n", to_encode[i], dst);
+                printf("[sanity] encode / decode for value `%d` failed (got %lu).\n", to_encode[i], dst);
             }
             assert(dst == to_encode[i]);
         }
