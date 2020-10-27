@@ -13,8 +13,7 @@ add_library(bpcodec
         src/codec/sdnv/loop/codec.cpp
         src/codec/cbor/cgoto/codec.cpp
         src/codec/cbor/standard/codec.cpp
-        src/codec/cbor/memo/codec.cpp
-        include/util/apple_endian.h)
+        src/codec/cbor/memo/codec.cpp)
 
 # This library ships with a few different options for encoding / decoding values.
 # Once can give them a try to see what the effects on performance look like.
