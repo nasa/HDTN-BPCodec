@@ -197,7 +197,20 @@ int main(int argc, char* argv[]) {
     uint64_t seq_base = 0;
 
     while(true) {
+#ifdef __APPLE__
+        // "recvmsg" has to be used on Apple platform.  It can only receive one
+        // message at a time and it's return value is the number of bytes
+        // received, not the number of messages received.
+        int res = recvmsg(fd, &msgbuf->msg_hdr, 0);
+        msgbuf->msg_len = res;
+
+        // "res" is is expected to be the number of messages received or an
+        // error flag.  Since "recvmsg" was used we can receive only one message,
+        // so set "res" to one or keep the error flag.
+        if (res > 0) res = 1;
+#else
         int res = recvmmsg(fd, msgbuf, BP_MSG_NBUF, 0, NULL);
+#endif
         if(res == 0) {
             continue;
         }

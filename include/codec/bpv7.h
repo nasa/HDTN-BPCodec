@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 #ifdef __APPLE__
-#include <unitypes.h>
+#include <sys/types.h>
 #endif
 #include <stdlib.h>
 #include <stdint.h>
